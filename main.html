@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Stream LLC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Your Business Name</h1>
+            <p>Professional [Your Service] Solutions</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <img src="your-photo.jpg" alt="Your Name" style="width: 200px; border-radius: 50%; margin: 1rem 0;">
+            <p>With [X] years of experience, [Your Name] specializes in...[your story]</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1: Detailed description</li>
+                <li>Service 2: Detailed description</li>
+                <li>Service 3: Detailed description</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone">
+                <textarea placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="formMessage"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Your Business Name | Address | Phone: (123) 456-7890</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS (Replace with your credentials)
+        (function() {
+            emailjs.init('service_iyx7ux4');
+        })();
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: this.name.value,
+                email: this.email.value,
+                phone: this.phone.value,
+                message: this.message.value
+            };
+
+            emailjs.send('service_iyx7ux4', '__ejs-test-mail-service__', formData)
+                .then(() => {
+                    document.getElementById('formMessage').innerHTML = 
+                        '<p style="color: green;">Message sent successfully!</p>';
+                    this.reset();
+                }, (error) => {
+                    document.getElementById('formMessage').innerHTML = 
+                        `<p style="color: red;">Error: ${error.text}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
