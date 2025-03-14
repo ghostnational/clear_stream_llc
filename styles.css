@@ -221,7 +221,7 @@ footer {
 
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 1960px) {
     
     /* Header Styles */
     header {
@@ -283,8 +283,9 @@ footer {
     }
 
     .gallery-item {
-        width: 90%; /* Make images smaller on mobile */
-        height: 250px; /* Adjust height for smaller screens */
+        align-self: center;
+        width: 80%; /* Make images smaller on mobile */
+        height: 350px; /* Adjust height for smaller screens */
     }
 
     /* Contact Form */
