@@ -226,16 +226,31 @@ footer {
 
 
 /* Mobile Styles */
-@media (max-width: 1860px) {
-    
+@media (max-width: 1960px) {
+    /* body {
+        width: 100%;
+    } */
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    nav a:hover {
+        color: #4346eb;
+    }
+
     /* Header Styles */
     header {
         padding: 10px;
     }
     
     #logo {
-        flex-direction: column;
         align-items: center;
+        display: flex;
+        flex-direction: column;
 
     }
 
@@ -249,6 +264,9 @@ footer {
     
     .service-card {
         align-self: center;
+    }
+    .service-card p {
+        font-size: 1em;
     }
 
     nav ul {
@@ -280,6 +298,9 @@ footer {
         width: 80%; /* Adjust width for mobile */
         height: auto; /* Adjust height for mobile */
     }
+    .service-card h3 {
+        font-size:  1.8em;
+    }
 
     /* Gallery Styles */
     #photos {
@@ -287,10 +308,32 @@ footer {
         overflow-x: visible; /* Disable horizontal scrolling */
     }
 
+    #services h2 {
+        font-size: 3.2em;
+    }
+
+    #galery h2 {
+        font-size: 3.2em;
+    }
+
+    #galery h2 {
+        font-size: 3.2em;
+    }
+
     .gallery-item {
         align-self: center;
         width: 80%; /* Make images smaller on mobile */
         height: 350px; /* Adjust height for smaller screens */
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    #contact h2 {
+        font-size: 3.2em;
     }
 
     /* Contact Form */
