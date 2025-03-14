@@ -14,7 +14,6 @@ body {
     font-weight: 1000px;
     font-style: normal;
 }
-
 a {
     text-decoration: none;
     color: inherit;
@@ -30,16 +29,17 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
 }
-
 #logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 #logo_combo {
     display: flex;
     align-items: center;
+    
 }
 
 #logo_combo img {
@@ -53,7 +53,6 @@ nav ul {
     gap: 20px;
     flex-wrap: wrap;
 }
-
 nav a:hover {
     color: #4346eb;
 }
@@ -66,11 +65,9 @@ nav a:hover {
     background: #3d69c0;
     color: white;
 }
-
 #home h2 {
     font-size: 5.2em;
 }
-
 #home p {
     font-size: 2.2em;
 }
@@ -89,11 +86,10 @@ nav a:hover {
     background: #3d69c0;
 }
 
-#contact {
+#contact{
     background: linear-gradient(to bottom left, #75b044, #3d69c0);
     background: #3d69c0;
 }
-
 .cta-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -105,10 +101,10 @@ nav a:hover {
     font-weight: bold;
     transition: all 0.3s;
 }
-
 .cta-button:hover {
     background-color: #ffdd33;
 }
+
 
 /* Section Styles */
 section {
@@ -127,21 +123,18 @@ section {
     justify-content: center;
     padding-left: 0%;
 }
-
-.service-card {
+.service-card { 
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+    border-radius: 8px;
     width: 15%;
     height: 50vh;
     background: linear-gradient(to top left, #3d69c0b6, #75b044a5);
     text-align: center;
 }
-
 .service-card h3 {
     font-size: 2.8em;
 }
-
 .service-card p {
     font-size: 1.8em;
 }
@@ -154,10 +147,11 @@ section {
     font-size: 5.2em;
 }
 
+
 /* Gallery styles */
 #photos {
     display: flex;            /* Use Flexbox to arrange images inline */
-    gap: 20px;                /* Add space between images */
+    gap: 10px;                /* Add space between images */
     padding: 20px;
     justify-content: flex-start; /* Align items to the left */
     overflow-x: auto;         /* Allow horizontal scrolling if images overflow */
@@ -184,6 +178,7 @@ section {
     transform: scale(1.05);   /* Slight zoom effect on hover */
 }
 
+
 /* Contact Form */
 #contact {
     display: flex;
@@ -191,20 +186,17 @@ section {
     gap: 10vh;
     justify-content: center;
 }
-
 form {
     display: flex;
     width: 40vh;
     flex-direction: column;
     gap: 10px;
 }
-
 input, textarea, button {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-
 button {
     align-self: center;
     width: 30%;
@@ -213,7 +205,6 @@ button {
     cursor: pointer;
     transition: all 0.3s;
 }
-
 button:hover {
     background-color: #187bcd;
 }
@@ -240,9 +231,23 @@ footer {
     #logo {
         flex-direction: column;
         align-items: center;
+
+    }
+
+    #logo_combo img {
+        margin-bottom: 1vh;
+    }
+
+    #logo_combo h1 {
+        display: none;
+    }
+    
+    .service-card {
+        align-self: center;
     }
 
     nav ul {
+        font-size: large;
         flex-direction: column;
         gap: 10px;
     }
