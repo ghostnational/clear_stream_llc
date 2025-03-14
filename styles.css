@@ -69,7 +69,7 @@ nav a:hover {
     font-size: 5.2em;
 }
 #home p {
-    font-size: 2.2em;
+    font-size: 1.5em;
 }
 
 #services h2 {
@@ -124,19 +124,21 @@ section {
     padding-left: 0%;
 }
 .service-card { 
+
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 15%;
-    height: 50vh;
+    height: 35vh;
     background: linear-gradient(to top left, #3d69c0b6, #75b044a5);
     text-align: center;
+    text-justify: center;
 }
 .service-card h3 {
     font-size: 2.8em;
 }
 .service-card p {
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 #galery h2 {
@@ -147,6 +149,9 @@ section {
     font-size: 5.2em;
 }
 
+#phone {
+    font-size: large;
+}
 
 /* Gallery styles */
 #photos {
@@ -221,7 +226,7 @@ footer {
 
 
 /* Mobile Styles */
-@media (max-width: 1960px) {
+@media (max-width: 1860px) {
     
     /* Header Styles */
     header {
