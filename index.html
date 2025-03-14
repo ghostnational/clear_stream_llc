@@ -21,7 +21,7 @@
             </div>
             <nav id="for_logo">
                 <ul>
-                    <li><a href="tel:+14238136455">+1 (423)813-6455</a></li>
+                    <li id="phone"><a href="tel:+14238136455">Mark +1 (423)813-6455</a></li>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#galery">Gallery</a></li>
@@ -102,37 +102,7 @@
         <!-- Add more items as needed -->
     </section>
 
-    <!-- <section >
-        <section class="about" id="about">
-            <h2>About Us</h2>
-            <p>Welcome to ClearStream, your local pressure washing specialist in Chattanooga! 
-                While we may be a new name in the industry, our commitment to delivering exceptional results and 
-                outstanding customer service sets us apart.</p>
-        </section>
-        <section class="about" id="story">
-            <h2>Our Story</h2>
-            <p>At ClearStream, we believe that a clean and well-maintained property can make a world
-                 of difference. Founded in 2024, our business was born out of a passion for helping homeowners and
-                  businesses enhance their property's curb appeal. Whether it's revitalizing a weathered driveway 
-                  or giving your home's exterior a fresh, clean look, we're here to make it happen.</p>
-        </section> -->
     
-        <!-- <section class="about" id="whyus">
-            <h2>Why Choose Us?</h2>
-            <h3>Passion-Driven: </h3>
-            <p>As a new business, we bring fresh energy, dedication, 
-                and attention to detail to every project.
-                </p>
-            <h3>Customer-Focused:</h3>
-            <p>Your satisfaction is our top priority. We listen to your needs 
-                and strive to exceed expectations.
-                </p>
-            <h3>Safe and Effective Methods:</h3>
-            <p>We use reliable equipment and eco-friendly cleaning products 
-                to ensure safety and quality. </p>
-            <h3>Affordable Pricing: </h3>
-            <p>We offer competitive rates without compromising the quality of our work.</p>
-        </section> -->
     </section>
 
     
@@ -140,7 +110,7 @@
     Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/example" method="POST">
+        <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -152,6 +122,23 @@
 
             <button type="submit">Send</button>
         </form>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+        (function() {
+            emailjs.init('KrCRMAd7EBpHPubxH4ZW1'); // Replace with your EmailJS user ID
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            emailjs.sendForm('service_iyx7ux4', 'template_zxtpumk', this)
+            .then(function(response) {
+                console.log('Success:', response);
+            }, function(error) {
+                console.log('Error:', error);
+            });
+        });
+        </script>
+
     </section>
     <footer>
         <p>&copy; 2025 ClearStream LLC. All rights reserved.</p>
