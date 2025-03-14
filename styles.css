@@ -322,8 +322,8 @@ footer {
 
     .gallery-item {
         align-self: center;
-        width: 80%; /* Make images smaller on mobile */
-        height: 350px; /* Adjust height for smaller screens */
+        width: 100%; /* Make images smaller on mobile */
+        height: 400px; /* Adjust height for smaller screens */
     }
 
     #contact {
