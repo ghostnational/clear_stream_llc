@@ -3,11 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
+
 body {
     background-color: #f0f4f8;
     color: #333;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000px;
+    font-style: normal;
 }
 a {
     text-decoration: none;
@@ -16,23 +21,37 @@ a {
 
 /* Header Styles */
 header {
-    background-color: #3d69c0;
+    background: linear-gradient(to bottom right,  #3d69c0, #75b044);
+    background: #3d69c0;
     color: white;
     padding: 20px;
-    /* text-align: center; */
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 #logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    filter: drop-shadow(0 0 0.75rem rgb(63, 63, 63));
+    
 }
+
+#logo_combo {
+    display: flex;
+    align-items: center;
+    
+}
+
+#logo_combo img {
+    filter: drop-shadow(0 0 0.30rem rgb(136, 180, 255));
+}
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 nav a:hover {
     color: #4346eb;
@@ -40,14 +59,36 @@ nav a:hover {
 
 /* Hero Section */
 #home {
-    padding: 60px 20px;
+    padding: 20vh;
     text-align: center;
-    background: linear-gradient(to bottom right, #3d69c0, #75b044);
+    background: linear-gradient(to bottom , #3d69c0, #75b044);
+    background: #3d69c0;
     color: white;
 }
+#home h2 {
+    font-size: 5.2em;
+}
 #home p {
-    font-size: 1.2em;
-    margin-top: 10px;
+    font-size: 2.2em;
+}
+
+#services h2 {
+    font-size: 5.2em;
+}
+
+#services {
+    background: linear-gradient(to bottom left, #75b044, #3d69c0);
+    background: #3d69c0;
+}
+
+#galery {
+    background: linear-gradient(to bottom right,  #3d69c0, #75b044);
+    background: #3d69c0;
+}
+
+#contact{
+    background: linear-gradient(to bottom left, #75b044, #3d69c0);
+    background: #3d69c0;
 }
 .cta-button {
     margin-top: 20px;
@@ -64,14 +105,14 @@ nav a:hover {
     background-color: #ffdd33;
 }
 
+
 /* Section Styles */
 section {
     padding: 40px 20px;
-    max-width: 1000px;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 8px;
+    max-width: 1000vh;
+    height: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 /* Services Section */
@@ -80,19 +121,74 @@ section {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0%;
 }
-.service-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
+.service-card { 
+    padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 200px;
+    border-radius: 8px;
+    width: 15%;
+    height: 50vh;
+    background: linear-gradient(to top left, #3d69c0b6, #75b044a5);
     text-align: center;
 }
+.service-card h3 {
+    font-size: 2.8em;
+}
+.service-card p {
+    font-size: 1.8em;
+}
+
+#galery h2 {
+    font-size: 5.2em;
+}
+
+#contact h2 {
+    font-size: 5.2em;
+}
+
+
+/* Gallery styles */
+#photos {
+    display: flex;            /* Use Flexbox to arrange images inline */
+    gap: 10px;                /* Add space between images */
+    padding: 20px;
+    justify-content: flex-start; /* Align items to the left */
+    overflow-x: auto;         /* Allow horizontal scrolling if images overflow */
+    scroll-snap-type: x mandatory; /* Smooth horizontal scrolling */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;             /* Set width of each image item */
+    height: 400px;            /* Set height of each image item */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* Ensure the image covers the space */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);   /* Slight zoom effect on hover */
+}
+
 
 /* Contact Form */
+#contact {
+    display: flex;
+    align-items: center;
+    gap: 10vh;
+    justify-content: center;
+}
 form {
     display: flex;
+    width: 40vh;
     flex-direction: column;
     gap: 10px;
 }
@@ -102,6 +198,8 @@ input, textarea, button {
     border-radius: 5px;
 }
 button {
+    align-self: center;
+    width: 30%;
     background-color: #75b044;
     color: white;
     cursor: pointer;
@@ -113,8 +211,93 @@ button:hover {
 
 /* Footer */
 footer {
+    display: flex;
+    align-self: flex-end;
     text-align: center;
     padding: 20px;
     background-color: #3d69c0;
     color: white;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    
+    /* Header Styles */
+    header {
+        padding: 10px;
+    }
+    
+    #logo {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #logo_combo img {
+        margin-bottom: 1vh;
+    }
+
+    #logo_combo h1 {
+        display: none;
+    }
+    
+    .service-card {
+        align-self: center;
+    }
+
+    nav ul {
+        font-size: large;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Hero Section */
+    #home {
+        padding: 10vh 10px;
+    }
+    
+    #home h2 {
+        font-size: 3em;
+    }
+
+    #home p {
+        font-size: 1.5em;
+    }
+
+    /* Services Section */
+    .service-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-card {
+        width: 80%; /* Adjust width for mobile */
+        height: auto; /* Adjust height for mobile */
+    }
+
+    /* Gallery Styles */
+    #photos {
+        flex-direction: column; /* Stack images vertically */
+        overflow-x: visible; /* Disable horizontal scrolling */
+    }
+
+    .gallery-item {
+        width: 90%; /* Make images smaller on mobile */
+        height: 250px; /* Adjust height for smaller screens */
+    }
+
+    /* Contact Form */
+    form {
+        width: 80%; /* Make the form wider for mobile */
+    }
+
+    input, textarea, button {
+        width: 100%; /* Ensure inputs fill the container */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
 }
