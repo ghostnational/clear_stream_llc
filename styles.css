@@ -198,6 +198,12 @@ section {
     gap: 10vh;
     justify-content: center;
 }
+
+.soc_media {
+    display: flex;
+    gap: 15px;
+}
+
 form {
     display: flex;
     width: 40vh;
@@ -319,10 +325,6 @@ footer {
         font-size: 3.2em;
     }
 
-    #galery h2 {
-        font-size: 3.2em;
-    }
-
     .gallery-item {
         align-self: center;
         width: 100%; /* Make images smaller on mobile */
@@ -331,6 +333,7 @@ footer {
 
     #contact {
         display: flex;
+        gap: 3vh;
         flex-direction: column;
         align-self: center;
     }
