@@ -123,6 +123,17 @@
     Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
+        <div class="soc_media">
+            <a href="https://www.instagram.com/clear_.stream._" target="_blank">
+                <img src="img\instagram.png" alt="Instagram" style="width: 35px; height: 35px;">
+            </a>
+            <a href="https://www.instagram.com/yourusername" target="_blank">
+                <img src="img\telegram.png" alt="Telegram" style="width: 35px; height: 35px;">
+            </a>
+            <a href="https://www.instagram.com/yourusername" target="_blank">
+                <img src="img\whatsapp.png" alt="Whatsapp" style="width: 35px; height: 35px;">
+            </a>
+        </div>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -133,25 +144,8 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Send</button>
+            <button type="submit" onclick="sendEmail()">Send</button>
         </form>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-        (function() {
-            emailjs.init('KrCRMAd7EBpHPubxH4ZW1'); // Replace with your EmailJS user ID
-        })();
-
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            emailjs.sendForm('service_iyx7ux4', 'template_zxtpumk', this)
-            .then(function(response) {
-                console.log('Success:', response);
-            }, function(error) {
-                console.log('Error:', error);
-            });
-        });
-        </script>
-
     </section>
     <footer>
         <p>&copy; 2025 ClearStream LLC. All rights reserved.</p>
