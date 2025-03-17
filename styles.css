@@ -39,7 +39,6 @@ header {
 #logo_combo {
     display: flex;
     align-items: center;
-    
 }
 
 #logo_combo img {
@@ -55,6 +54,14 @@ nav ul {
 }
 nav a:hover {
     color: #4346eb;
+}
+
+#for_logo {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 /* Hero Section */
@@ -227,10 +234,6 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    /* body {
-        width: 100%;
-    } */
-
     nav ul {
         list-style: none;
         display: flex;
