@@ -165,7 +165,7 @@ section {
     display: flex;            /* Use Flexbox to arrange images inline */
     gap: 10px;                /* Add space between images */
     padding: 20px;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: center; /* Align items to the left */
     overflow-x: auto;         /* Allow horizontal scrolling if images overflow */
     scroll-snap-type: x mandatory; /* Smooth horizontal scrolling */
 }
