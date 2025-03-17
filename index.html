@@ -10,6 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "iZiJ1tmMO3X76jOBw",
+            });
+        })();
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -19,15 +29,18 @@
                 <img src="img\ClearStream LOGO for Google.png" alt="LOGO" width="100">
                 <h1 id="name">Clear Stream LLC</h1>
             </div>
-            <nav id="for_logo">
-                <ul>
-                    <li id="phone"><a href="tel:+14238136455">Mark +1 (423)813-6455</a></li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#galery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div id="burger-menu">
+                <div class="burger-icon" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <nav id="for_logo">
+                    <ul>
+                        <li id="phone"><a href="tel:+14238136455">Mark +1 (423)813-6455</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
